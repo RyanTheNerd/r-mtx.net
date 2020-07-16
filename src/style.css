@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital@0;1&display=swap');
+
+body {
+   font-family: "Titillium Web";
+}
+#contacts {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   align-content: space-evenly;
+   justify-items: center;
+   align-items: center;
+   margin: 4em;
+}
+
+@media(max-width: 720px) {
+   .contact {
+      margin-bottom: 2em;
+   }
+}
+
