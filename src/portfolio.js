@@ -1,10 +1,10 @@
-import {Component} from "react";
+import React, {Component} from "react";
 import ProjectCard from "./components/project-card";
 import Contact from "./components/contact";
-import baseURL from "./portfolio-data";
+import {baseURL} from "./portfolio-data";
 
 
-class Portfolio extends Component {
+export default class Portfolio extends Component {
    constructor(props) {
       super(props);
    }
@@ -13,14 +13,17 @@ class Portfolio extends Component {
          (p) => {return <ProjectCard 
              URL={baseURL + p.URL} 
              imgURL={baseURL + p.imgURL} 
-             title={p.title} text={p.text}/>
+             title={p.title} 
+             text={p.text}
+             key={p.key} />
          }
       );
       let personalProjects = this.props.personal.map(
          (p) => {return <ProjectCard 
              URL={baseURL + p.URL} 
              imgURL={baseURL + p.imgURL} 
-             title={p.title} text={p.text}/>
+             title={p.title} text={p.text}
+             key={p.key} />
          }
       );
       return(
