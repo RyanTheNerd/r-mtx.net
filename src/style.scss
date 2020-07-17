@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital@0;1&display=swap');
+
+$jumbo-hue: 160;
+$jumbo-br: 50%;
+$jumbo-sat: 50%;
+
+$body-hue: $jumbo-hue + 120 + 60;
+$body-br: $jumbo-br + 35%;
+$body-sat: 0;
+
+$card-hue: $jumbo-hue + 120 - 60;
+$card-br: $jumbo-br + 30%;
+$card-sat: $jumbo-sat;
+$card-color: hsl($card-hue, $card-sat, $card-br);
+
+$sh-size: 0.3em;
+$sh-blur: 0.4em;
+$sh-color: hsl($jumbo-hue, 100%, $jumbo-br - 35%);
+
+
+body {
+   font-family: "Titillium Web";
+   background-color: hsl($body-hue, $body-sat, $body-br); 
+}
+
+.jumbotron {
+   background-color: hsl($jumbo-hue, $jumbo-sat, $jumbo-br);
+   color: hsl($jumbo-hue - 120, 0%, $jumbo-br + 50%);
+   text-shadow: $sh-size $sh-size $sh-blur $sh-color;
+}
+.card-body {
+   background-color: hsl($card-hue, $card-sat, $card-br);
+}
+#contacts {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   align-content: space-evenly;
+   justify-items: center;
+   align-items: center;
+   margin: 4em;
+}
+
+
+@media(max-width: 720px) {
+   .contact {
+      margin-bottom: 2em;
+   }
+}
+
