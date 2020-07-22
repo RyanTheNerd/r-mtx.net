@@ -1,35 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital@0;1&display=swap');
 
-$jumbo-hue: 160;
-$jumbo-br: 50%;
-$jumbo-sat: 50%;
 
-$body-hue: $jumbo-hue + 120 + 60;
-$body-br: $jumbo-br + 35%;
-$body-sat: 0;
+$jumbo-hue: 285;
+$jumbo-sat: 75%;
+$jumbo-lit: 50%;
 
-$card-hue: $jumbo-hue + 120 - 60;
-$card-br: $jumbo-br + 30%;
-$card-sat: $jumbo-sat;
-$card-color: hsl($card-hue, $card-sat, $card-br);
+$body-hue: 165;
+$body-sat: 50%;
+$body-lit: 90%;
+$body-color: hsl($body-hue, $body-sat, $body-lit);
+
+$card-hue: 105;
+$card-lit: 50%;
+$card-sat: 50%;
+$card-color: hsl($card-hue, $card-sat, $card-lit);
 
 $sh-size: 0.3em;
 $sh-blur: 0.4em;
-$sh-color: hsl($jumbo-hue, 100%, $jumbo-br - 35%);
+$sh-color: hsl($jumbo-hue, 100%, $jumbo-lit - 35%);
 
 
 body {
    font-family: "Titillium Web";
-   background-color: hsl($body-hue, $body-sat, $body-br); 
+   background-color: $body-color;
 }
 
 .jumbotron {
-   background-color: hsl($jumbo-hue, $jumbo-sat, $jumbo-br);
-   color: hsl($jumbo-hue - 120, 0%, $jumbo-br + 50%);
+   background-color: hsl($jumbo-hue, $jumbo-sat, $jumbo-lit);
+   color: hsl($jumbo-hue - 120, 0%, $jumbo-lit + 50%);
    text-shadow: $sh-size $sh-size $sh-blur $sh-color;
 }
 .card-body {
-   background-color: hsl($card-hue, $card-sat, $card-br);
+   background-color: hsl($card-hue, $card-sat, $card-lit);
 }
 #contacts {
    display: flex;

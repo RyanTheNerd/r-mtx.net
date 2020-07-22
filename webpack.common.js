@@ -1,6 +1,5 @@
-var path = require("path");
-var postcssPresetEnv = require("postcss-preset-env");
-
+const path = require('path');
+const postcssPresetEnv = require("postcss-preset-env");
 
 module.exports = {
     module: {
@@ -8,8 +7,6 @@ module.exports = {
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                enforce: 'pre',
-                use: ['source-map-loader'],
                 use: {
                     loader: "babel-loader"
                 }
@@ -41,12 +38,11 @@ module.exports = {
                 },
                 ],
             },
-
         ]
     },
-    devServer: {
-        contentBase: path.join(__dirname, "dist"),
-        port: 3000
+    output: {
+        filename: 'portfolio.bundle.js',
+        path: path.resolve(__dirname, 'dist')
     }
     
 }

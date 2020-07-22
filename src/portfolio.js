@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import ProjectCard from "./components/project-card";
 import Contact from "./components/contact";
-import {baseURL} from "./portfolio-data";
 
 
 export default class Portfolio extends Component {
@@ -11,8 +10,8 @@ export default class Portfolio extends Component {
    render() {
       let fccProjects = this.props.fcc.map(
          (p) => {return <ProjectCard 
-             URL={baseURL + p.URL} 
-             imgURL={baseURL + p.imgURL} 
+             URL={p.URL} 
+             imgURL={p.imgURL} 
              title={p.title} 
              text={p.text}
              key={p.key} />
@@ -20,8 +19,8 @@ export default class Portfolio extends Component {
       );
       let personalProjects = this.props.personal.map(
          (p) => {return <ProjectCard 
-             URL={baseURL + p.URL} 
-             imgURL={baseURL + p.imgURL} 
+             URL={p.URL} 
+             imgURL={p.imgURL} 
              title={p.title} text={p.text}
              key={p.key} />
          }
@@ -51,13 +50,13 @@ export default class Portfolio extends Component {
    <div className="container-fluid">
       <div className="row" id="contacts">
          <Contact href="https://github.com/RyanTheNerd" 
-            src={baseURL + "/img/github.png"}/>
+            src={"/img/github.png"}/>
          
          <Contact href="https://codepen.io/Haggleforth"
-            src={baseURL + "/img/codepen.png"}/>
+            src={"/img/codepen.png"}/>
          
          <Contact href="https://www.freecodecamp.org/ryanthenerd"
-            src={baseURL + "/img/fcc.png"}/>
+            src={"/img/fcc.png"}/>
       </div>
    </div>
 </footer>
