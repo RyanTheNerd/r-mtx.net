@@ -1,6 +1,7 @@
 import React, {Component} from "react";
-import ProjectCard from "./components/project-card";
+import ProjectList from "./components/project-group";
 import Contact from "./components/contact";
+import NavLink from "./components/nav-link";
 
 
 export default class Portfolio extends Component {
@@ -8,43 +9,29 @@ export default class Portfolio extends Component {
       super(props);
    }
    render() {
-      let fccProjects = this.props.fcc.map(
-         (p) => {return <ProjectCard 
-             URL={p.URL} 
-             imgURL={p.imgURL} 
-             title={p.title} 
-             text={p.text}
-             key={p.key} />
-         }
-      );
-      let personalProjects = this.props.personal.map(
-         (p) => {return <ProjectCard 
-             URL={p.URL} 
-             imgURL={p.imgURL} 
-             title={p.title} text={p.text}
-             key={p.key} />
-         }
-      );
       return(
 <div>
    
    
-<div className="jumbotron">
+<div className="jumbotron mb-0 pb-4 rounded-0">
    <h1 className="display-3">Ryan Mattox</h1>
-   <p className="lead ml-3">Front End Web Developer</p>
+   <p className="lead ml-3">
+      Frontend Web Developer
+   </p>
+</div>
+<div className="navbar navbar-dark bg-dark justify-content-start">
+   <a className="navbar-brand" href="#">Home</a>
+   <NavLink href="#personal" title="Personal Projects"/>
+   <NavLink href="#fcc" title="FCC Projects"/>
+   <NavLink href="#platforms" title="Platforms"/>
+   <NavLink href="#contacts" title="Contacts"/>
 </div>
 
 <div id="projects" className="container">
-   <h1 className="text-center mb-4 mt-5">Personal Projects</h1>
-   <div className="well row mb-4">
-      {personalProjects}
-   </div>
-
-   <h1 className="text-center mb-4 mt-5">Free Code Camp Projects</h1>
-   <div className="well row mb-4">
-      {fccProjects}
-   </div>
-
+   <ProjectList id="personal" title="Personal Projects" projectData={this.props.personal}/>
+   <ProjectList id="fcc" title="FreeCodeCamp Projects" projectData={this.props.fcc}/>
+</div>
+<div className="container">
 <footer className="page-footer py-5">
    <h1 className="text-center mb-4 mt-5">Check me out on these platforms:</h1>
    <div className="container-fluid">
