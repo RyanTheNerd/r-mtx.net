@@ -25,7 +25,7 @@ export default class Portfolio extends Component {
              key={p.key} />
          }
       );
-      return(
+      return(>
 <div>
    
    
@@ -61,8 +61,8 @@ export default class Portfolio extends Component {
    </div>
 </footer>
 </div>
-   
-   
+
+
 </div> 
       );
    }
