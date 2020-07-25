@@ -17,8 +17,8 @@ export default class ProjectGroup extends React.Component {
     }
     render() {
         return(
-            <div id={this.props.id}>
-                <h1 className="text-center mb-4 mt-5">{this.props.title}</h1>
+            <div id={this.props.id} className="my-5">
+                <h1 className="text-center my-5">{this.props.title}</h1>
                 <div className="well row mb-4">
                     {this.projects}
                 </div>

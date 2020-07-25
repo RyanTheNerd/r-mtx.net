@@ -19,7 +19,7 @@ export default class Portfolio extends Component {
       Frontend Web Developer
    </p>
 </div>
-<div className="navbar navbar-dark bg-dark justify-content-start">
+<div className="navbar navbar-dark bg-dark justify-content-start" id="navbar">
    <a className="navbar-brand" href="#">Home</a>
    <NavLink href="#personal" title="Personal Projects"/>
    <NavLink href="#fcc" title="FCC Projects"/>
@@ -31,23 +31,21 @@ export default class Portfolio extends Component {
    <ProjectList id="personal" title="Personal Projects" projectData={this.props.personal}/>
    <ProjectList id="fcc" title="FreeCodeCamp Projects" projectData={this.props.fcc}/>
 </div>
-<div className="container">
-<footer className="page-footer py-5">
+<footer className="page-footer py-5" id="contact-container">
+   <div className="container">
    <h1 className="text-center mb-4 mt-5">Check me out on these platforms:</h1>
-   <div className="container-fluid">
-      <div className="row" id="contacts">
-         <Contact href="https://github.com/RyanTheNerd" 
-            src={"/img/github.png"}/>
-         
-         <Contact href="https://codepen.io/Haggleforth"
-            src={"/img/codepen.png"}/>
-         
-         <Contact href="https://www.freecodecamp.org/ryanthenerd"
-            src={"/img/fcc.png"}/>
-      </div>
+   <div className="row" id="contacts">
+      <Contact href="https://github.com/RyanTheNerd" 
+         src={"/img/github-lt.png"}/>
+      
+      <Contact href="https://codepen.io/Haggleforth"
+         src={"/img/codepen-lt.png"}/>
+      
+      <Contact href="https://www.freecodecamp.org/ryanthenerd"
+         src={"/img/fcc-lt.png"}/>
+   </div>
    </div>
 </footer>
-</div>
 
 
 </div> 
