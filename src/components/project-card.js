@@ -3,7 +3,7 @@ import React from "react";
 function ProjectCard(props) {
    return (
       <div className="col-md-4 project-card my-2">
-         <div className="card" >
+         <div className="card">
             <a href={props.URL} target="_blank">
                <img 
                   src={props.imgURL} 

@@ -2,25 +2,28 @@
 @use 'sass:color';
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital@0;1&display=swap');
 
-$palette: hsl(330, 100%, 50%), hsl(0, 100%, 50%), hsl(30, 100%, 50%), hsl(150, 100%, 50%), hsl(180, 100%, 50%), hsl(210, 100%, 50%);
+$palette: hsl(330, 100%, 50%), hsl(0, 100%, 50%), hsl(30, 100%, 50%), hsl(150, 100%, 75%), hsl(180, 100%, 50%), hsl(210, 100%, 50%);
 
 
 
 $jumbo-color: color.adjust(list.nth($palette, 6), $lightness: -15%);
 
-$body-color: color.adjust(list.nth($palette, 5), $saturation: -30%);
+$body-color: color.adjust(list.nth($palette, 1), $lightness: -15%); 
 
-$projects-color: color.adjust(list.nth($palette, 5), $lightness: -20%);
+$projects-color: color.adjust(list.nth($palette, 5), $lightness: -10%); 
 
 $contact-color: color.adjust(list.nth($palette, 6), $lightness: -35%, $saturation: -30%);
 
-$card-color: color.adjust(list.nth($palette, 4), $saturation: -20%, $lightness: -10%);
+$card-color: color.adjust(list.nth($palette, 4), $lightness: -40%);
 
 
-
-$shadow: 0px 4px 3px rgba(0,0,0,0.4),
-             0px 8px 13px rgba(0,0,0,0.1),
-             0px 18px 23px rgba(0,0,0,0.1);
+@function genShadow($scale, $br) {
+   $shadow: 0 (4 * $scale) (3 * $scale) hsla(0, 0%, 0%, 0.4 * $br),
+            0 (8 * $scale) (13 * $scale) hsla(0, 0%, 0%, 0.1 * $br),
+            0 (18 * $scale) (23 * $scale) hsla(0, 0%, 0%, 0.1 * $br);
+   @debug $shadow;
+   @return $shadow;
+}
 
 
 body {
@@ -30,8 +33,11 @@ body {
 }
 
 #projects {
+   color: white;
+   text-shadow: genShadow(0.05em, 1);
    background-color: $projects-color;
    margin-top: 3em;
+   padding-bottom: 3em;
    padding-left: 6em;
    padding-right: 6em;
    padding-top: 3em;
@@ -59,19 +65,32 @@ body {
 .jumbotron {
    background-color: $jumbo-color;
    color: white;
-   text-shadow: $shadow;
+   text-shadow: genShadow(1px, 1);
    padding-left: 7em;
    padding-left: 5em;
 }
 .card-body {
    background-color: $card-color;
-   color: hsl(0, 0%, 20%);
+   color: hsl(0, 0%, 100%);
+   text-shadow: 1px 1px black;
+}
+.card-text {
+   transition: all 0.50s;
+   text-overflow: ellipsis;
+   overflow: hidden;
+   width: 100%;
+   line-height: 1.5em;
+   height: 3em;
+}
+.card-text:hover {
+   height: 6em;
 }
 
 
 @media(max-width: 720px) {
    .contact {
       margin-bottom: 2em;
+      overflow: visible;
    }
 }
 
