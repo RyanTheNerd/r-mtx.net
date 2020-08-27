@@ -7,12 +7,6 @@
             "text": "A tetris clone written with modern features and an arcade feel"
         },
         {
-            "URL": "/soccerio/dist/",
-            "imgURL": "soccerio.png",
-            "title": "Soccerio",
-            "text": "A soccer-esque game with the asthetics of Agario"
-        },
-        {
             "URL": "/ice-skating-guy-in-hat",
             "imgURL": "ice-skating-guy-in-hat.png",
             "title": "Ice Skating Guy in Hat",
@@ -25,16 +19,16 @@
             "text": "Take any regular image and turn it into pixel art with this neat tool."
         },
         {
+            "URL": "/soccerio/dist/",
+            "imgURL": "soccerio.png",
+            "title": "Soccerio",
+            "text": "A soccer-esque game with the asthetics of Agario"
+        },
+        {
             "URL": "/pile-of-roses/dist",
             "imgURL": "pile-of-roses.png",
             "title": "Pile of Roses",
             "text": "A pile of randomly generated Maurer Roses: Click and drag to move them around!"
-        },
-        {
-            "URL": "/asthetics/dist",
-            "imgURL": "asthetics.png",
-            "title": "Asthetics",
-            "text": "I think this looks cool"
         },
         {
             "URL": "/this-kinda-makes-me-feel-sick/dist",
