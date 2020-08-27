@@ -43,7 +43,16 @@ module.exports = {
                 loader: 'file-loader',
                 options: {
                     name: '[name].[ext]',
+                    outputPath: 'img'
                 },
+            },
+            {
+                test: /\.html$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: './'
+                }
             }
         ]
     },
