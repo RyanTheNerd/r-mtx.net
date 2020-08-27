@@ -1,12 +1,14 @@
 import React from "react";
-
+const images = require.context('../', true, /\.png$/i);
+console.log(images.keys());
+console.log(images("./img/asthetics.png"))
 function ProjectCard(props) {
    return (
       <div className="col-md-4 project-card my-2">
          <div className="card">
             <a href={props.URL} target="_blank">
                <img 
-                  src={props.imgURL} 
+                  src={images('./img/' + props.imgURL).default} 
                   style={{backgroundColor: "black"}}
                   className="card-img-top"
                />

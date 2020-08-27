@@ -92,5 +92,15 @@ body {
       margin-bottom: 2em;
       overflow: visible;
    }
+   #projects {
+      padding: 2em;
+   }
+}
+@media(max-width: 990px) {
+   #projects {
+      width: 100%;
+      max-width: none;
+      margin: 3em 0;
+   }
 }
 

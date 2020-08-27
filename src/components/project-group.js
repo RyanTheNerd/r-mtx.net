@@ -4,14 +4,14 @@ import ProjectCard from "./project-card";
 export default class ProjectGroup extends React.Component {
     constructor(props) {
         super(props);
-        this.projects = props.projectData.map((p) => {
+        this.projects = props.projectData.map((p, i) => {
             return (
             <ProjectCard 
                 URL={p.URL} 
                 imgURL={p.imgURL} 
                 title={p.title} 
                 text={p.text}
-                key={p.key} />
+                key={i} />
             );
         });
     }
