@@ -19,22 +19,22 @@
             "text": "Take any regular image and turn it into pixel art with this neat tool."
         },
         {
-            "URL": "/soccerio/dist/",
-            "imgURL": "soccerio.png",
-            "title": "Soccerio",
-            "text": "A soccer-esque game with the asthetics of Agario"
+            "URL": "/Game-of-Life",
+            "imgURL": "game-of-life.png",
+            "title": "Game of Life",
+            "text": "Conway's game of life"
         },
         {
-            "URL": "/pile-of-roses/dist",
-            "imgURL": "pile-of-roses.png",
-            "title": "Pile of Roses",
-            "text": "A pile of randomly generated Maurer Roses: Click and drag to move them around!"
+            "URL": "/pile-of-kitters/dist",
+            "imgURL": "pile-of-kitters.png",
+            "title": "Pile of Kitters",
+            "text": "A pile of kitters for you to throw into the air using your finger"
         },
         {
-            "URL": "/this-kinda-makes-me-feel-sick/dist",
-            "imgURL": "cubes.png",
-            "title": "Cubes",
-            "text": "Trippy looking anaglyph of moving cubes"
+            "URL": "/rain/dist",
+            "imgURL": "rain.png",
+            "title": "Rain",
+            "text": "Ever wanted to watch the rain but you live in the desert? Well now you can!"
         }
     ],
     "fcc": [
